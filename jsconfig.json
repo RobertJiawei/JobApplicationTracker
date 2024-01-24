@@ -1,0 +1,19 @@
+{
+  "include": ["./"],
+  "exclude": [
+    ".cache",
+    "build",
+    "node_modules",
+    "**/node_modules/*",
+    "**/.cache/*",
+    "**/build/*"
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "target": "ES6",
+    "module": "CommonJS",
+    "strict": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

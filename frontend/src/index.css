@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .th {
+    @apply text-left px-4 py-5 whitespace-nowrap font-extralight text-lg text-gray-800 font-serif;
+  }
+
+  .td {
+    @apply text-left font-light px-4 py-2 h-14 hover:bg-gray-100 font-serif border text-lg whitespace-nowrap;
+    min-width: max-content;
+  }
+
+  .tdFirst {
+    @apply text-left font-light px-4 py-2 h-14 hover:bg-gray-100 font-serif border-t border-b text-lg whitespace-nowrap;
+    min-width: max-content;
+  }
+
+  .tdLast {
+    @apply text-left font-light px-4 py-2 h-14 hover:bg-gray-100 font-serif border-t border-b text-lg whitespace-nowrap max-w-xs truncate;
+    min-width: max-content;
+  }
+}
