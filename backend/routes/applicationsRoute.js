@@ -66,6 +66,7 @@ router.get("/search", async (req, res) => {
   }
 });
 
+// sort applications route
 router.get("/sort", async (req, res) => {
   try {
     const { sortBy } = req.query || "company";
