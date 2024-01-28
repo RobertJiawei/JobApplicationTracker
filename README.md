@@ -8,6 +8,6 @@
 
 ---
 
-#### Screen shot of Home page with some testing data
+#### Screen shot of Home page with some test data
 
 ![test screen shot](/frontend/src/img/TestPageScreenShot.png)
