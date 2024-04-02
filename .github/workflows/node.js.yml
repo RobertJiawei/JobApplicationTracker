@@ -34,5 +34,4 @@ jobs:
           cd ../frontend
           npm ci
           npm run build
-          cd ../backend
           pm2 restart jobapplication
