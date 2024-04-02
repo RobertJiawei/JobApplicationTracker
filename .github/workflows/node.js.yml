@@ -35,4 +35,4 @@ jobs:
           npm ci
           npm run build
           cd ../backend
-          pm2 start index.js
+          pm2 restart index
