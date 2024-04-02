@@ -26,10 +26,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: |
+          touch .env
+          echo "${{ secrets.ENV_FILE }}" > .env
+      - run: |
           cd backend
           npm ci
           cd ../frontend
           npm ci
           npm run build
           cd ../backend
-          npm start
+          pm2 restart index
