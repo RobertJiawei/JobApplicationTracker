@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import applicationsRoute from "./routes/applicationsRoute.js";
 import dotenv from "dotenv";
+import path from "path";
 
 dotenv.config({ path: "../.env" });
 
@@ -10,6 +11,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+const __dirname = path.resolve();
 
 app.use("/applications", applicationsRoute);
 mongoose
@@ -23,3 +25,8 @@ mongoose
   .catch((error) => {
     console.log(error);
   });
+
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../", "frontend", "dist", "index.html"));
+});
