@@ -34,4 +34,6 @@ jobs:
           cd ../frontend
           npm ci
           npm run build
-      - run: pm2 restart jobapplication
+      - run: |
+          cd ../backend
+          pm2 start index.js
