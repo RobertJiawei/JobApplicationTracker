@@ -71,7 +71,7 @@ const AddApplication = () => {
 
     if (formIsValid) {
       axios
-        .post("http://jobapplication.wudevelop.com/applications", application)
+        .post("https://jobapplication.wudevelop.com/applications", application)
         .then(() => navigate("/"))
         .catch((error) => console.error("Posting application error:", error));
     }

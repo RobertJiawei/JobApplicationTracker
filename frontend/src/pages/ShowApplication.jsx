@@ -11,7 +11,7 @@ const ShowApplication = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5555/applications/${id}`)
+      .get(`https://jobapplication.wudevelop.com/applications/${id}`)
       .then((res) => {
         setApplication(res.data);
       })

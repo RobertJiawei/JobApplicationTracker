@@ -21,7 +21,9 @@ const Home = () => {
   useEffect(() => {
     if (searchTerm) {
       axios
-        .get(`http://localhost:5555/applications/search?term=${searchTerm}`)
+        .get(
+          `https://jobapplication.wudevelop.com/applications/search?term=${searchTerm}`
+        )
         .then((res) => {
           setApplications(res.data.data);
         })
@@ -30,7 +32,9 @@ const Home = () => {
         });
     } else if (select) {
       axios
-        .get(`http://localhost:5555/applications/sort?sortBy=${select}`)
+        .get(
+          `https://jobapplication.wudevelop.com/applications/sort?sortBy=${select}`
+        )
         .then((res) => {
           setApplications(res.data.data);
         })
@@ -39,7 +43,7 @@ const Home = () => {
         });
     } else {
       axios
-        .get("http://localhost:5555/applications")
+        .get("https://jobapplication.wudevelop.com/applications")
         .then((res) => {
           setApplications(res.data.data);
         })

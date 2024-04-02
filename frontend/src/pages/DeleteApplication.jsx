@@ -11,7 +11,7 @@ const DeleteApplication = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5555/applications/${id}`)
+      .get(`https://jobapplication.wudevelop.com/applications/${id}`)
       .then((res) => {
         setApplication(res.data);
       })
@@ -23,7 +23,7 @@ const DeleteApplication = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     axios
-      .delete(`http://localhost:5555/applications/${id}`)
+      .delete(`https://jobapplication.wudevelop.com/applications/${id}`)
       .then((res) => {
         console.log(res.message);
         navigate("/");

@@ -19,7 +19,7 @@ const EditApplication = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5555/applications/${id}`)
+      .get(`https://jobapplication.wudevelop.com/applications/${id}`)
       .then((res) => {
         setApplication(res.data);
       })
@@ -59,7 +59,10 @@ const EditApplication = () => {
 
     if (formIsValid) {
       axios
-        .put(`http://localhost:5555/applications/${id}`, application)
+        .put(
+          `https://jobapplication.wudevelop.com/applications/${id}`,
+          application
+        )
         .then(() => navigate("/"))
         .catch((error) => console.error("Updating application error:", error));
     }
